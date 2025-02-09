@@ -107,7 +107,7 @@ const DashboardLayout = (props: any) => {
 
           {/* Main Content */}
           <div className="flex-1">
-            <div className="bg-white rounded-xl p-6 min-h-[calc(100vh-6rem)] shadow-sm">
+            <div className="bg-white rounded-xl p-6 min-h-[calc(100vh-3rem)] shadow-sm">
               {props.children}
             </div>
           </div>

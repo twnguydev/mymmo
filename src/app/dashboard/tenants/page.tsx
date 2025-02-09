@@ -154,7 +154,7 @@ interface MetricCardProps {
 const MetricCard: React.FC<MetricCardProps> = ({ title, value, trend, icon: Icon, alert = false }) => (
   <Card>
     <CardContent className="pt-6">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-start">
         <div className="space-y-1">
           <p className="text-sm font-medium text-gray-500">{title}</p>
           <p className="text-2xl font-bold">{value}</p>

@@ -53,8 +53,8 @@ const PropertiesDashboard = () => {
           icon={Building}
         />
         <MetricCard
-          title="Revenus locatifs"
-          value="8 500 €/mois"
+          title="Revenus mensuels"
+          value="8 500 €"
           trend="+5.2%"
           icon={Euro}
         />
@@ -148,7 +148,7 @@ interface MetricCardProps {
 const MetricCard: React.FC<MetricCardProps> = ({ title, value, trend, icon: Icon }) => (
   <Card>
     <CardContent className="pt-6">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-start">
         <div className="space-y-1">
           <p className="text-sm font-medium text-gray-500">{title}</p>
           <p className="text-2xl font-bold">{value}</p>

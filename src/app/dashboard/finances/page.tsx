@@ -41,21 +41,21 @@ const FinancialDashboard = () => {
         {/* Métriques Physiques */}
         <TabsContent value="physical">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <MetricCard 
+            <MetricCard
               title="Taux d'Occupation"
               value="95%"
               trend="+2.5%"
               positive={true}
               description="Sur l'ensemble du parc"
             />
-            <MetricCard 
+            <MetricCard
               title="Délai Moyen de Paiement"
               value="3.2 jours"
               trend="-0.5 jours"
               positive={true}
               description="Par rapport au terme"
             />
-            <MetricCard 
+            <MetricCard
               title="Taux d'Impayés"
               value="1.2%"
               trend="+0.3%"
@@ -93,7 +93,7 @@ const FinancialDashboard = () => {
                     title="En Travaux"
                     value="1"
                     total="20"
-                    color="bg-blue-500"
+                    color="bg-blue-600"
                   />
                 </div>
               </CardContent>
@@ -132,21 +132,21 @@ const FinancialDashboard = () => {
         {/* Métriques Immobilières */}
         <TabsContent value="real-estate">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <MetricCard 
+            <MetricCard
               title="Valeur du Patrimoine"
               value="2.8 M€"
               trend="+12.5%"
               positive={true}
               description="Sur 12 mois"
             />
-            <MetricCard 
+            <MetricCard
               title="Prix Moyen au m²"
               value="4 250 €"
               trend="+8.2%"
               positive={true}
               description="Zone géographique"
             />
-            <MetricCard 
+            <MetricCard
               title="Surface Totale"
               value="850 m²"
               trend="+120 m²"
@@ -164,7 +164,7 @@ const FinancialDashboard = () => {
                 <div className="h-72">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
-                      <Pie 
+                      <Pie
                         data={propertyRevenue}
                         dataKey="value"
                         nameKey="name"
@@ -216,21 +216,21 @@ const FinancialDashboard = () => {
         {/* Métriques Business */}
         <TabsContent value="business">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <MetricCard 
+            <MetricCard
               title="Rentabilité Brute"
               value="7.2%"
               trend="+0.5%"
               positive={true}
               description="Moyenne du parc"
             />
-            <MetricCard 
+            <MetricCard
               title="Cash-Flow Mensuel"
               value="9 450 €"
               trend="+850 €"
               positive={true}
               description="Après charges"
             />
-            <MetricCard 
+            <MetricCard
               title="ROI Moyen"
               value="11.3%"
               trend="+1.2%"
@@ -250,31 +250,31 @@ const FinancialDashboard = () => {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="month" />
                     <YAxis />
-                    <Tooltip 
+                    <Tooltip
                       formatter={(value: number) => new Intl.NumberFormat('fr-FR', {
                         style: 'currency',
                         currency: 'EUR'
                       }).format(value)}
                     />
                     <Legend />
-                    <Line 
-                      type="monotone" 
-                      dataKey="revenus" 
-                      stroke="#2563eb" 
+                    <Line
+                      type="monotone"
+                      dataKey="revenus"
+                      stroke="#2563eb"
                       name="Revenus"
                       strokeWidth={2}
                     />
-                    <Line 
-                      type="monotone" 
-                      dataKey="charges" 
-                      stroke="#dc2626" 
+                    <Line
+                      type="monotone"
+                      dataKey="charges"
+                      stroke="#dc2626"
                       name="Charges"
                       strokeWidth={2}
                     />
-                    <Line 
-                      type="monotone" 
-                      dataKey="cashflow" 
-                      stroke="#059669" 
+                    <Line
+                      type="monotone"
+                      dataKey="cashflow"
+                      stroke="#059669"
                       name="Cash-flow"
                       strokeWidth={2}
                     />
@@ -361,9 +361,8 @@ const MetricCard: React.FC<MetricCardProps> = ({ title, value, trend, positive, 
       <div className="text-sm font-medium text-gray-500">{title}</div>
       <div className="flex items-baseline mt-4">
         <div className="text-2xl font-semibold">{value}</div>
-        <div className={`ml-2 text-sm font-medium ${
-          positive ? 'text-green-600' : 'text-red-600'
-        }`}>
+        <div className={`ml-2 text-sm font-medium ${positive ? 'text-green-600' : 'text-red-600'
+          }`}>
           {trend}
         </div>
       </div>
@@ -402,11 +401,10 @@ const DeadlineItem: React.FC<DeadlineItemProps> = ({ title, value, date, status 
       <div className="font-medium">{title}</div>
       <div className="text-sm text-gray-500">{date}</div>
     </div>
-    <div className={`px-3 py-1 rounded-full text-sm font-medium ${
-      status === 'warning' ? 'bg-yellow-100 text-yellow-800' :
-      status === 'error' ? 'bg-red-100 text-red-800' :
-      'bg-blue-100 text-blue-800'
-    }`}>
+    <div className={`px-3 py-1 rounded-full text-sm font-medium ${status === 'warning' ? 'bg-yellow-100 text-yellow-800' :
+        status === 'error' ? 'bg-red-100 text-red-800' :
+          'bg-blue-100 text-blue-800'
+      }`}>
       {value}
     </div>
   </div>
@@ -441,11 +439,10 @@ const RatioItem: React.FC<RatioItemProps> = ({ title, value, target, status }) =
       <div className="font-medium">{title}</div>
       <div className="text-sm text-gray-500">{target}</div>
     </div>
-    <div className={`text-lg font-bold ${
-      status === 'success' ? 'text-green-600' :
-      status === 'warning' ? 'text-yellow-600' :
-      'text-red-600'
-    }`}>
+    <div className={`text-lg font-bold ${status === 'success' ? 'text-green-600' :
+        status === 'warning' ? 'text-yellow-600' :
+          'text-red-600'
+      }`}>
       {value}
     </div>
   </div>

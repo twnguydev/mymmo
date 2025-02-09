@@ -43,7 +43,7 @@ const AccountingDashboard = () => {
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold">Comptabilité</h1>
-          <p className="text-gray-500">SCI Immobilier - Année 2025</p>
+          <p className="text-gray-500">Année 2025</p>
         </div>
         <div className="flex gap-3">
           <Button variant="outline" className="flex items-center gap-2">
