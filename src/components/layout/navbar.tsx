@@ -25,7 +25,7 @@ export const Logo = () => {
         className="text-2xl font-semibold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
         // style={{ fontFamily: 'Inter, sans-serif' }}
       >
-        Owneo
+        Owneo<span className="text-gray-600">.fr</span>
       </span>
     </div>
   );

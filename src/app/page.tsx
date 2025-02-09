@@ -55,16 +55,16 @@ export default function Home() {
 
           <Navbar isLoginPage={false} />
 
-          <div className="max-w-6xl mx-auto px-4 pt-4 pb-32 relative">
+          <div className="max-w-6xl mx-auto px-4 pt-4 pb-40 relative">
             {/* Top Bar Alert */}
-            <div className="flex justify-center mb-12">
+            {/* <div className="flex justify-center mb-12">
               <div className="bg-white/80 backdrop-blur-sm px-5 py-2 rounded-full border border-gray-200 shadow-sm flex items-center gap-2 animate-fade-in-down">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <span className="text-sm font-medium">Offre de lancement : 3 mois gratuits</span>
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
               {/* Left Column */}
               <div className="space-y-8">
                 <div className="space-y-6">
@@ -76,7 +76,7 @@ export default function Home() {
 
                   <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
                     La gestion locative{' '}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">réinventée</span>
+                    avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Owneo</span>.fr
                   </h1>
 
                   <p className="text-xl text-gray-600 max-w-xl">
@@ -96,7 +96,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-xl border border-gray-100 shadow-sm">
                     <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                    <span className="text-sm font-medium text-gray-600">Agences</span>
+                    <span className="text-sm font-medium text-gray-600">Agences immobilières</span>
                   </div>
                 </div>
 
@@ -136,7 +136,7 @@ export default function Home() {
               </div>
 
               {/* Right Column - Dashboard Preview */}
-              <div className="relative">
+              <div className="relative my-28 md:my-0">
                 <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-200 p-6 transform hover:scale-[1.02] transition-transform duration-300">
                   <img
                     src="/screenshots/realestate-dashboard.png"

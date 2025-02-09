@@ -4,10 +4,11 @@ import { Check, Star, AlertCircle } from 'lucide-react';
 export const PricingSection = () => {
   const [isAnnual, setIsAnnual] = useState(false);
 
-  const calculatePrice = (monthlyPrice: number) => {
-    if (monthlyPrice === 0) return 0;
+  const calculatePrice = (monthlyPrice: number): string => {
+    if (monthlyPrice === 0) return "0";
     const annualPrice = monthlyPrice * 12 * 0.8;
-    return isAnnual ? (annualPrice / 12).toFixed(2) : monthlyPrice.toFixed(2);
+    const value = isAnnual ? (annualPrice / 12).toFixed(2) : monthlyPrice.toFixed(2);
+    return value.replace(".", ",");
   };
 
   const premiumModules = [
@@ -74,7 +75,7 @@ export const PricingSection = () => {
       price: 14.90,
       priceDescription: "Pour les professionnels",
       description: 'La puissance maximale pour votre patrimoine',
-      mainFeature: 'Gestion illimitée et premium',
+      mainFeature: 'Gestion illimitée et collaborateurs',
       features: [
         'Nombre de lots illimité',
         'États des lieux illimités',
