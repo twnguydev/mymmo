@@ -151,7 +151,7 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    <span className="text-sm font-medium text-gray-600 whitespace-nowrap">+5 nouveaux cette semaine</span>
+                    <span className="text-sm font-medium text-gray-600 whitespace-nowrap">+5 utilisateurs cette semaine</span>
                   </div>
                 </div>
 

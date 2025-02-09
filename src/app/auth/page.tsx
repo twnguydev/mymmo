@@ -13,7 +13,7 @@ const LoginUI = () => {
   ];
 
   return (
-    <div className="min-h-screen flex bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen flex bg-gray-200 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
@@ -73,7 +73,7 @@ const LoginUI = () => {
 
       {/* Login Form */}
       <div className="flex-1 flex items-center justify-center p-4 relative">
-        <Card className="w-full max-w-md bg-white/80 backdrop-blur-sm">
+        <Card className="w-full max-w-md bg-white/80 backdrop-blur-sm rounded-xl">
           <CardContent className="pt-6">
             <div className="mb-8 text-center">
               <div className="flex justify-center mb-4">

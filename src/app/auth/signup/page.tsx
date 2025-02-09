@@ -12,7 +12,7 @@ const SignupUI = () => {
   const [userType, setUserType] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen flex bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen flex bg-gray-200 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
@@ -45,6 +45,8 @@ const SignupUI = () => {
               "Import facile de vos biens existants",
               "Création automatique des documents",
               "Invitation de vos collaborateurs",
+              "Tableau de bord personnalisable",
+              "Données sécurisées et sauvegardées",
               "Support réactif 6j/7",
             ].map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-gray-100">
@@ -60,7 +62,7 @@ const SignupUI = () => {
 
       {/* Sign Up Form */}
       <div className="flex-1 flex items-center justify-center p-4 relative">
-        <Card className="w-full max-w-md bg-white/80 backdrop-blur-sm">
+        <Card className="w-full max-w-md bg-white/80 backdrop-blur-sm rounded-xl">
           <CardContent className="pt-6">
             <div className="mb-8 text-center">
               <div className="flex justify-center mb-4">
@@ -135,7 +137,7 @@ const SignupUI = () => {
                       <div className="mr-3">🏠</div>
                       <div className="text-left">
                         <div className="font-semibold">Propriétaire individuel</div>
-                        <div className="text-sm text-gray-500">Je gère mes biens personnels</div>
+                        <div className="text-sm">Je gère mes biens personnels</div>
                       </div>
                     </div>
                   </Button>
@@ -149,7 +151,7 @@ const SignupUI = () => {
                       <div className="mr-3">🏢</div>
                       <div className="text-left">
                         <div className="font-semibold">Société / SCI</div>
-                        <div className="text-sm text-gray-500">Je gère un portefeuille professionnel</div>
+                        <div className="text-sm">Je gère un portefeuille professionnel</div>
                       </div>
                     </div>
                   </Button>
