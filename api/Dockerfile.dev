@@ -1,0 +1,21 @@
+FROM node:20-alpine
+
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN if [ "$NODE_ENV" = "production" ]; then \
+        npm ci --only=production; \
+    else \
+        npm install; \
+    fi
+
+COPY . .
+
+ENV PORT=${API_PORT:-3001}
+EXPOSE ${PORT}
+
+CMD ["sh", "-c", "npm run start:${NODE_ENV:-dev}"]
